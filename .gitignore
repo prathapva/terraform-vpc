@@ -44,3 +44,5 @@ Thumbs.db
 
 #teraform lock
 .terraform.lock.hcl
+*.hcl
+**/.terraform.lock.hcl

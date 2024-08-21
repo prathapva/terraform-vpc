@@ -14,6 +14,6 @@ resource "aws_subnet" "public" {
   cidr_block        = var.publicsnet_cidr[count.index]
   availability_zone = data.aws_availability_zones.azs.names[count.index]
 
-  tags = { Name = format("${var.vpc_name}-${var.publicsnet_prefix}-$", substr(element(data.aws_availability_zones.azs.group_names, count.index), 0, -2))
+  tags = { Name = format("${var.vpc_name}-${var.publicsnet_prefix}-%s", substr(element(data.aws_availability_zones.azs.group_names, count.index), 0, -2))
   }
 }

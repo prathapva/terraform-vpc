@@ -41,3 +41,6 @@ provider.tf
 
 # Windows
 Thumbs.db
+
+#teraform lock
+.terraform.lock.hcl
